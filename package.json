@@ -1,0 +1,41 @@
+{
+  "name": "insta-mongo-example",
+  "version": "1.0.0",
+  "description": "Just a simple example of a Node.js/Express app using insta-mongo for an instant MongoDB dev database.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "concurrently \"npm run start-db\" \"npm run start-with-dev-db\" --kill-others",
+    "start-db": "insta-mongo --db=backend --load=three --db-port=7001 --rest-port=7000",
+    "start-with-dev-db": "cross-env NODE_ENV=development DB_CONNECTION_STRING=mongodb://localhost:7001 nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashleydavis/insta-mongo-example.git"
+  },
+  "keywords": [
+    "javascript",
+    "file",
+    "upload",
+    "node.js",
+    "nodejs",
+    "mongodb"
+  ],
+  "author": "ashley@codecapers.com.au",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ashleydavis/insta-mongo-example/issues"
+  },
+  "homepage": "https://github.com/ashleydavis/insta-mongo-example#readme",
+  "dependencies": {
+    "body-parser": "^2.0.0-beta.1",
+    "express": "^5.0.0-beta.1",
+    "mongodb": "^4.5.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.1.0",
+    "cross-env": "^7.0.3",
+    "insta-mongo": "^0.0.4",
+    "nodemon": "^2.0.16"
+  }
+}

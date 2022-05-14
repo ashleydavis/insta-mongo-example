@@ -1,0 +1,55 @@
+@base_url = http://localhost:5050
+
+###
+# Tests the server is live.
+#
+
+GET {{base_url}}/api/is-alive
+
+###
+#
+# Retreives an non-existing asset.
+# Should return a 404 status code.
+#
+
+GET {{base_url}}/api/person?id=627b0c040a597ed870c38a2e
+
+###
+#
+# Get a person that does exist (the person is in the database fixture).
+#
+
+GET {{base_url}}/api/person?id=627f3bdce279db4e5c0b3407
+
+###
+# @name add_person
+# 
+# Adds an new person.
+#
+
+POST {{base_url}}/api/person
+content-type: application/json
+
+{
+    "Name": "Jones",
+    "Sex": "M",
+    "Age": 28,
+    "Height (in)": 68,
+    "Weight (lbs)": 145
+}
+
+###
+#
+# Gets the person that was just added.
+#
+
+@added_person_id = {{add_person.response.body.insertedId}}
+
+GET {{base_url}}/api/person?id={{added_person_id}}
+
+###
+#
+# Gets all people.
+#
+
+GET {{base_url}}/api/people
