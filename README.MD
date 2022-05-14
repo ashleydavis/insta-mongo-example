@@ -2,6 +2,10 @@
 
 Just a simple example of a Node.js/Express app using [insta-mongo](https://www.npmjs.com/package/insta-mongo) for an instant MongoDB dev database.
 
+## Support the developer 
+
+<a target="_blank" href="http://www.codecapers.com.au/about#support-my-work">Click here to **support the developer.**</a>
+
 ## Setup
 
 Download the code repo or clone it using Git.
