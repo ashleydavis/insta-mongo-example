@@ -22,7 +22,7 @@ Run it like this:
 npm run start:dev
 ```
 
-This starts the NOee.js app with live reload using Nodemon, sets NODE_ENV to "development" and starts the MongoDB dev database.
+This starts the Node.js app with live reload using Nodemon, sets NODE_ENV to "development" and starts the MongoDB dev database.
 
 The REST API is available at http://localhost:5050.
 
