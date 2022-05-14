@@ -36,7 +36,7 @@ Also take a look in `test.http`. This is a script for [VS Code REST Client](http
 
 ## How it works
 
-When you invoke `npm run start:dev` it runs the follow script (defined in `package.json`):
+When you invoke `npm run start:dev` it runs the following script (defined in `package.json`):
 
 ```bash
 concurrently "npm run start-db" "npm run start-with-dev-db" --kill-others
