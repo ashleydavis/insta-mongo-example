@@ -56,7 +56,7 @@ Hopefully that's clear, but if not please log an issue and ask a question or rea
 
 ## Run the code for production
 
-Now you can run the example code:
+Run the app for production in the standard way:
 
 ```bash
 npm start
